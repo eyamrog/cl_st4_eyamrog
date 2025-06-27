@@ -15,10 +15,6 @@ proc import datafile="/home/&sasusername/&myfolder/df_cl_st1_eyamrog_dimensions_
    getnames=yes;
 run;
 
-/* Reset ODS output stream */
-ods html close;
-ods html;
-
 /* ANOVA - Dimension 1 by Source */
 
 title "ANOVA for &project - Dimension 1 by Source";
@@ -148,6 +144,3 @@ proc glm data=WORK.CL_ST4_PH1_EYAMROG_ANOVA;
     means Source*Discipline;
 run;
 quit;
-
-/* Reset ODS output stream */
-ods html close;
